@@ -20,7 +20,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Runtime: nodejs14.x
-      CodeUri: s3://uni-codebuild-artifact/lambda-typescript-deploy/typescript-deploy/built/dev/ping
+      CodeUri: s3://uni-codebuild-artifact/lambda-typescript-deploy/typescript-deploy/built/dev/ping/index.js
       Handler: index.handler
       Events:
         Vote:
