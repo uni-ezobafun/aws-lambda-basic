@@ -21,17 +21,9 @@ Resources:
     Properties:
       Runtime: nodejs14.x
       Role: arn:aws:iam::260006775748:role/lambda-basic-role
-      Policies:
-        - Version: "2012-10-17"
-          Statement: 
-          - Effect: "Allow"
-            Action: 
-              - "s3:GetObject"
-            Resource: [
-                "arn:aws:s3:::uni-lambda-dev/*",
-                "arn:aws:s3:::uni-lambda-dev"
-            ]
-      CodeUri: s3://uni-lambda-dev/lambda-typescript-deploy/typescript-deploy/built/dev/ping
+      Code: 
+        - S3Bucket: uni-lambda-dev
+        - S3Key: lambda-typescript-deploy/typescript-deploy/built/dev/ping
       Handler: index.handler
       Events:
         Vote:
