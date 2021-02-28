@@ -20,6 +20,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Runtime: nodejs14.x
+      Role: arn:aws:iam::260006775748:role/lambda-basic-role
       CodeUri: s3://uni-lambda-dev/lambda-typescript-deploy/typescript-deploy/built/dev/ping
       Handler: index.handler
       Events:
