@@ -8,7 +8,7 @@ phases:
     commands:
       - npm install
       - npm run build-dev
-      - aws cloudformation package --template-file ./sam/dev/template.yaml --s3-bucket uni-lambda-dev  --s3-prefix sam/aws-lambda-basic/dev/package --output-template-file template.yaml
+      - aws cloudformation package --template-file ./sam/dev/template.yaml --s3-bucket uni-cloudformation-dev  --s3-prefix sam/aws-lambda-basic/dev/package --output-template-file template.yaml
       - aws cloudformation deploy --template-file ./sam/dev/template.yaml --stack-name lambda-typescript-deploy --capabilities CAPABILITY_IAM
   post_build:
     commands:
