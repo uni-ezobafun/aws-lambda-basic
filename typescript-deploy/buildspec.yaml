@@ -15,4 +15,4 @@ phases:
       - echo done!
 artifacts:
   files:
-    - typescript-deploy/built/dev
+    - typescript-deploy/built/dev/*
