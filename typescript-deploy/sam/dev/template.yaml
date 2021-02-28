@@ -31,7 +31,7 @@ Resources:
                 "arn:aws:s3:::uni-lambda-dev/*",
                 "arn:aws:s3:::uni-lambda-dev"
             ]
-      CodeUri: s3://uni-lambda-dev/lambda-typescript-deploy/typescript-deploy/built/dev/ping
+      CodeUri: ../../built/dev/ping
       Handler: index.handler
       Events:
         Vote:
